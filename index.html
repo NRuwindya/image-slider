@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seven Wonders of the World</title>
+    <link rel="stylesheet" href="global.css">
+    <link rel="stylesheet" href="style.css">
+
+<body>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <div class="container">
+
+        <div class="slide">
+            <div class="item" style="background-image: url(assets/slide_wall.jpg);">
+                <div class="content">
+                    <div class="name">Great Wall of China</div>
+                    <div class="des">The Great Wall of China is a series of fortifications made of stone, brick, tamped
+                        earth, wood, and other materials. Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
+                    <button>See More</button>
+                </div>
+            </div>
+            <div class="item" style="background-image: url(assets/slide_petra.jpg);">
+                <div class="content">
+                    <div class="name">Petra, Jordan</div>
+                    <div class="des">Petra, originally known to its inhabitants as Raqmu, is a historical and
+                        archaeological city in southern Jordan. Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    </div>
+                    <button>See More</button>
+                </div>
+            </div>
+            <div class="item" style="background-image: url(assets/slide_christ.png);">
+                <div class="content">
+                    <div class="name">Christ the Redeemer, Brazil</div>
+                    <div class="des">Christ the Redeemer is an Art Deco statue of Jesus Christ in Rio de Janeiro,
+                        Brazil. Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
+                    <button>See More</button>
+                </div>
+            </div>
+            <div class="item" style="background-image: url(assets/slide_machu.jpg);">
+                <div class="content">
+                    <div class="name">Machu Picchu, Peru</div>
+                    <div class="des">Machu Picchu is a 15th-century Inca citadel located in the Eastern Cordillera of
+                        southern Peru on a 2,430-meter mountain ridge. Lorem ipsum dolor sit amet consectetur
+                        adipisicing elit.</div>
+                    <button>See More</button>
+                </div>
+            </div>
+            <div class="item" style="background-image: url(assets/slide_chichen.jpg);">
+                <div class="content">
+                    <div class="name">Chichen Itza, Mexico</div>
+                    <div class="des">Chichen Itza was a large pre-Columbian city built by the Maya people of the
+                        Terminal Classic period. Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
+                    <button>See More</button>
+                </div>
+            </div>
+            <div class="item" style="background-image: url(assets/slide_colosseum.jpeg);">
+                <div class="content">
+                    <div class="name">Colosseum, Italy</div>
+                    <div class="des">The Colosseum is an oval amphitheater in the center of the city of Rome, Italy.
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
+                    <button>See More</button>
+                </div>
+            </div>
+            <div class="item" style="background-image: url(assets/slide_taj.jpg);">
+                <div class="content">
+                    <div class="name">Taj Mahal, India</div>
+                    <div class="des">The Taj Mahal is an ivory-white marble mausoleum on the south bank of the Yamuna
+                        River in the Indian city of Agra. Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
+                    <button>See More</button>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="button">
+            <button class="prev"><i class="fa-solid fa-arrow-left"></i></button>
+            <button class="next"><i class="fa-solid fa-arrow-right"></i></button>
+        </div>
+
+    </div>
+    <script>
+        let next = document.querySelector('.next')
+        let prev = document.querySelector('.prev')
+
+        next.addEventListener('click', function () {
+            let items = document.querySelectorAll('.item')
+            document.querySelector('.slide').appendChild(items[0])
+        })
+
+        prev.addEventListener('click', function () {
+            let items = document.querySelectorAll('.item')
+            document.querySelector('.slide').prepend(items[items.length - 1]) // here the length of items = 6
+        })
+    </script>
+</body>
+
+</html>
